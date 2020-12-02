@@ -1,0 +1,12 @@
+spherical:
+    dev:
+        docker:
+            install:
+                base: alpine:v3.12
+            run:
+                options:
+                    - --cap-add=NET_ADMIN
+                    - --device=/dev/net/tun
+                    - --net host
+                volumes:
+                    - zerotier:/var/lib/zerotier-one

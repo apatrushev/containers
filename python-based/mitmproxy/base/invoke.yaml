@@ -1,0 +1,10 @@
+spherical:
+    dev:
+        docker:
+            install:
+                base: python:3
+                image: mitmproxy
+            run:
+                image: mitmproxy
+                volumes:
+                    - mitmproxy:/root/.mitmproxy

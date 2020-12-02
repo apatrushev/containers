@@ -11,5 +11,6 @@ RUN apk -U add --no-cache libstdc++ \
     && pip install mitmproxy \
     && apk del remove \
     && rm -rf /root/.cache
+VOLUME /root/.mitmproxy
 # TODO: use tini or other init
 ENTRYPOINT [ "mitmdump" ]

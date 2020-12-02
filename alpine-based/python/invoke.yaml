@@ -1,0 +1,5 @@
+spherical:
+    dev:
+        docker:
+            install:
+                base: alpine:v3.12

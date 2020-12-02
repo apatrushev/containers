@@ -1,0 +1,14 @@
+spherical:
+    dev:
+        docker:
+            install:
+                base: mitmproxy
+                image: mitmproxy-docker
+            run:
+                image: mitmproxy-docker
+                network: host
+                volumes:
+                    - mitmproxy:/root/.mitmproxy
+                env:
+                    GITHUB_USER: <>
+                    GITHUB_TOKEN: <>

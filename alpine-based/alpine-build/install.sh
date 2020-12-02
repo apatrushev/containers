@@ -26,7 +26,7 @@ else
         cd ${CHROOT_DIR}/etc/apk
         echo ${REPO} >repositories
         head -1 repositories | sed 's/main$/community/' >>repositories
-        head -1 repositories | sed 's/main$/testing/' >>repositories
+        # head -1 repositories | sed 's/main$/testing/' >>repositories
     )
 
     if [ -n "${PACKAGES}" ]; then

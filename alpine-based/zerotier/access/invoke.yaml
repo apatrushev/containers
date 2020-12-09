@@ -1,0 +1,16 @@
+spherical:
+    dev:
+        docker:
+            install:
+                base: python:3
+            run:
+                network: host
+                env:
+                    NETWORK: 565799d8f6c822ba
+                options:
+                    - --cap-add=NET_ADMIN
+                    - --device=/dev/net/tun
+                volumes:
+                    - /root/.ssh/authorized_keys:/root/.ssh/authorized_keys
+                    - /var/run/docker.sock:/var/run/docker.sock
+                    - zerotier:/var/lib/zerotier-one

@@ -1,0 +1,6 @@
+spherical:
+    dev:
+        docker:
+            run:
+                daemon: -ti --rm --privileged --pid=host
+                network: host

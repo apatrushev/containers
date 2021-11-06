@@ -7,7 +7,7 @@ spherical:
             run:
                 image: mitmproxy-docker
                 options:
-                    - -p 11180:11180
+                    - -p 127.0.0.1:11180:11180
                 volumes:
                     - mitmproxy:/root/.mitmproxy
                 env:

@@ -13,7 +13,7 @@ RUN if [ x3 = x"$PYTHON_VERSION" ]; then \
         ); \
     else \
         apk add --no-cache python python-dev curl || apk add --no-cache python2 python2-dev curl; \
-        curl --proto '=https' --tlsv1.2 -sSf https://bootstrap.pypa.io/get-pip.py | python; \
+        curl --proto '=https' --tlsv1.2 -sSf https://bootstrap.pypa.io/pip/2.7/get-pip.py | python; \
     fi \
     && pip --no-cache install --upgrade pip wheel \
     && rm -rf /root/.cache

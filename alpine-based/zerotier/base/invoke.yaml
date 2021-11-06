@@ -2,7 +2,7 @@ spherical:
     dev:
         docker:
             install:
-                base: alpine:v3.12
+                base: alpine:v3.13
             run:
                 options:
                     - --cap-add=NET_ADMIN
